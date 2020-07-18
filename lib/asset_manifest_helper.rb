@@ -13,8 +13,8 @@ module AssetManifestHelper
   end
 
   def image_pack_tag(name, *options)
-    path = compute_source_path(name, :images)
-    javascript_include_tag(path, *options)
+    path = compute_source_path(File.join("images", name), :images)
+    image_tag(path, *options)
   end
 
   private
