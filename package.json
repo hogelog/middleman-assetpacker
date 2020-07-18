@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build": "NODE_ENV=production parcel build source/javascript/index.html --out-dir source/packs --public-url /packs",
+    "watch": "NODE_ENV=development parcel watch source/javascript/index.html --out-dir source/packs --public-url /packs"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-bundle-manifest": "^0.2.0",
+    "sass": "^1.26.10"
+  }
+}
