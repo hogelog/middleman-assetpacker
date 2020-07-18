@@ -1,3 +1,9 @@
+PATH
+  remote: extension/middleman-assetpacker
+  specs:
+    middleman-assetpacker (0.0.1)
+      middleman-core (>= 4.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -95,6 +101,7 @@ PLATFORMS
 
 DEPENDENCIES
   middleman (>= 4.3)
+  middleman-assetpacker!
 
 BUNDLED WITH
    2.1.4

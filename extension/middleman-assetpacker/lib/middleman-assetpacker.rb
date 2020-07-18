@@ -1,6 +1,6 @@
 require "middleman-core"
 
-Middleman::Extensions.register :middleman-assetpacker do
-  require "my-extension/extension"
-  MyExtension
+Middleman::Extensions.register :assetpacker do
+  require "middleman-assetpacker/extension"
+  Middleman::Extension::Assetpacker
 end
