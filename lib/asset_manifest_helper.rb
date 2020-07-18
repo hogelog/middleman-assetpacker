@@ -20,13 +20,8 @@ module AssetManifestHelper
   private
 
   def compute_source_path(name, kind=nil)
-    names = [name]
-    names.unshift(asset_normalize_extension(kind, name.dup)) if kind
-    asset_name = names.find do |name|
-      asset_manifest[name]
-    end
-    raise "#{name} not found" unless asset_name
-    asset_manifest[asset_name]
+    normalized_name = kind ? asset_normalize_extension(kind, name.dup) : name
+    asset_manifest.fetch(normalized_name)
   end
 
   def asset_manifest
