@@ -1,5 +1,18 @@
+# If you do not have OpenSSL installed, update
+# the following line to use "http://" instead
 source 'https://rubygems.org'
 
-gem 'middleman', '>= 4.3'
+# Specify your gem's dependencies in middleman-assetpacker.gemspec
+gemspec
 
-gem 'middleman-assetpacker', path: "extension/middleman-assetpacker"
+group :development do
+  gem 'rake'
+  gem 'rdoc'
+  gem 'yard'
+end
+
+group :test do
+  gem 'cucumber'
+  gem 'aruba'
+  gem 'rspec'
+end

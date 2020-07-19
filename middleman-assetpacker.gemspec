@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/hogelog/middleman-assetpacker"
   s.summary     = %q{Asset packer plugin for middleman}
 
-  s.files         = `git ls-files`.split("\n")
+  s.files         = `git ls-files -- . ':!example/'`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]

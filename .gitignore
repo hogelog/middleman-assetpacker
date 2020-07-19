@@ -1,7 +1,5 @@
-.bundle
-.cache
-.DS_Store
-.sass-cache
-build/
-node_modules
-source/packs/
+# Ignore bundler lock file
+/Gemfile.lock
+
+# Ignore pkg folder
+/pkg
