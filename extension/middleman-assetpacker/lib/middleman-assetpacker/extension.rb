@@ -11,21 +11,21 @@ class Middleman::Extension::Assetpacker < ::Middleman::Extension
 
   helpers do
     def javascript_pack_tag(name, *options)
-      path = compute_source_path(name, :js)
+      path = compute_asset_path(name, :js)
       javascript_include_tag(path, *options)
     end
 
     def stylesheet_pack_tag(name, *options)
-      path = compute_source_path(name, :css)
+      path = compute_asset_path(name, :css)
       stylesheet_link_tag(path, *options)
     end
 
     def image_pack_tag(name, *options)
-      path = compute_source_path(File.join("images", name), :images)
+      path = compute_asset_path(File.join("images", name), :images)
       image_tag(path, *options)
     end
 
-    def compute_source_path(name, kind=nil)
+    def compute_asset_path(name, kind=nil)
       normalized_name = kind ? asset_normalize_extension(kind, name.dup) : name
       asset_manifest.fetch(normalized_name)
     end
